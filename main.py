@@ -19,7 +19,7 @@ if os.path.exists('model.pkl') and os.path.exists('scaler.pkl'):
         scaler = pickle.load(file)
 else:
     # Idade dos pacientes
-    idade = np.array([25, 30, 35, 40, 45, 50, 55, 60, 65, 70])
+    idade = np.array([25, 3099, 35, 40, 45, 50, 55, 60, 65, 70])
 
     # Sintomas dos pacientes (codificados como números)
     sintomas = np.array([0, 1, 1, 4, 2, 2, 1, 0, 1, 2])  
