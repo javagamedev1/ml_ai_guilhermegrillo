@@ -126,6 +126,8 @@ def predict():
     X_novo = np.array([[idade, sintomas]])
     X_novo = scaler.transform(X_novo)
     y_pred = classifier.predict(X_novo)
+    
+
     return render_template('index.html', prediction=y_pred[0])
 
 if __name__ == '__main__':
@@ -150,6 +152,8 @@ if os.path.exists('model.pkl') and os.path.exists('scaler.pkl'):
         classifier = pickle.load(file)
     with open('scaler.pkl', 'rb') as file:
         scaler = pickle.load(file)
+         print("Modelo e scaler dankicarregados com sucesso.")
+
 else:
     # Idade dos pacientes
     idade = np.array([25, 309889, 35, 40, 45, 50, 55, 60, 65, 70])
