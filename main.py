@@ -16,6 +16,7 @@ if os.path.exists('model.pkl') and os.path.exists('scaler.pkl'):
     with open('model.pkl', 'rb') as file:
         classifier = pickle.load(file)
     with open('scaler.pkl', 'rb') as file:
+       lalalalala
         scaler = pickle.load(file)
 else:
     # Idade dos pacientes
